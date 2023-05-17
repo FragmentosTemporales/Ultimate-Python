@@ -3,6 +3,9 @@ class Perro:
         self.nombre = nombre
         self.edad = edad
     
+    def __del__(self):
+        print(f"Perro eliminado {self.nombre}")
+    
     def __str__(self):
         return f"clase Perro: {self.nombre}"    
     
@@ -10,6 +13,4 @@ class Perro:
         print(f"{self.nombre} dice: Guau!")
         
 perro = Perro("Chocolo", 7)
-print(perro)
-texto = str(perro)
-print(texto)
+del perro
